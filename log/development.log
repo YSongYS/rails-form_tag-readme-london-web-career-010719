@@ -112,3 +112,75 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-02-01 11:22:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (41.0ms)
+Completed 500 Internal Server Error in 18132ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `post_new_path' for #<#<Class:0x00007ffc362acaa8>:0x00007ffc37236a78>
+Did you mean?  posts_path):
+    1: 
+    2: <h3>Post Form</h3>
+    3: <form action="<%= post_new_path %>" method="POST">
+    4:   <label>Post title:</label><br>
+    5:   <input type="text" id="post_title" name="post[title]"><br>
+    6: 
+  app/views/posts/new.html.erb:3:in `_app_views_posts_new_html_erb__588568467488072355_70360605751600'
+  app/controllers/posts_controller.rb:8:in `new'
+
+
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-02-01 11:23:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (26.5ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `post_new_path' for #<#<Class:0x00007fefc3919618>:0x00007fefc105aa10>
+Did you mean?  posts_path):
+    1: 
+    2: <h3>Post Form</h3>
+    3: byebug
+    4: <form action="<%= post_new_path %>" method="POST">
+    5:   <label>Post title:</label><br>
+    6:   <input type="text" id="post_title" name="post[title]"><br>
+    7: 
+  app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb__1835824392494760616_70333849347560'
+  app/controllers/posts_controller.rb:7:in `new'
+
+
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-02-01 11:24:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Redirected to 
+Completed 500 Internal Server Error in 298ms (Views: 292.9ms | ActiveRecord: 0.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/posts_controller.rb:8:in `new'
+
+
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/ysys/.rvm/gems/ruby-2.5.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-02-01 11:25:08 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
